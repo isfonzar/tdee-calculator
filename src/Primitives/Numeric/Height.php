@@ -1,6 +1,6 @@
 <?php
 
-    namespace isfonzar\TDEECalculator\Primitives;
+    namespace isfonzar\TDEECalculator\Primitives\Numeric;
 
     class Height
     {
