@@ -15,6 +15,6 @@
 
         public function calculate()
         {
-
+            return 'ok';
         }
     }

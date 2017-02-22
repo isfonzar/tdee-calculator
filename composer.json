@@ -9,5 +9,14 @@
             "email": "icaro.isf@gmail.com"
         }
     ],
-    "require": {}
+    "require": {},
+    "require-dev": {
+        "phpunit/phpunit": "5.5.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "isfonzar\\TDEECalculator\\": "src/",
+            "isfonzar\\TDEECalculator\\Tests\\": "tests/"
+        }
+    }
 }
