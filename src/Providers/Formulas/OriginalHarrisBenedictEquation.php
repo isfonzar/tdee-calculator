@@ -1,9 +1,8 @@
 <?php
 
     namespace isfonzar\TDEECalculator\Providers\Formulas;
-
     use isfonzar\TDEECalculator\Exceptions\InvalidGender;
-    use isfonzar\TDEECalculator\Primitives\Gender;
+    use isfonzar\TDEECalculator\Models\Gender;
 
     /**
      * Class OriginalHarrisBenedictEquation
@@ -13,16 +12,16 @@
      */
     class OriginalHarrisBenedictEquation implements FormulaInterface
     {
-        public function calculate($gender, $weight, $height, $age)
+        public function calculate(Gender $gender, $weight, $height, $age)
         {
-            if ($gender == Gender::MALE)
+            switch ($gender)
             {
-                return $this->calculateForMen($weight, $height, $age);
-            }
-
-            if ($gender == Gender::FEMALE)
-            {
-                return $this->calculateForWomen($weight, $height, $age);
+                case Gender::MALE:
+                    return $this->calculateForMen($weight, $height, $age);
+                    break;
+                case Gender::FEMALE:
+                    return $this->calculateForWomen($weight, $height, $age);
+                    break;
             }
 
             throw new InvalidGender();

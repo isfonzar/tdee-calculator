@@ -2,7 +2,9 @@
 
     namespace isfonzar\TDEECalculator\Providers\Formulas;
 
+    use isfonzar\TDEECalculator\Models\Gender;
+
     interface FormulaInterface
     {
-        public function calculate($gender, $weight, $height, $age);
+        public function calculate(Gender $gender, $weight, $height, $age);
     }
