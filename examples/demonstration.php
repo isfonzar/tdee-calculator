@@ -6,4 +6,4 @@
 
     $tdeeCalculator = new TDEECalculator();
 
-    echo $tdeeCalculator->calculate('male', 1.80, 90, 24);
+    echo $tdeeCalculator->calculate('male', 180, 90, 24);

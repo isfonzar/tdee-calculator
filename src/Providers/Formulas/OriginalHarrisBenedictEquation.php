@@ -2,7 +2,10 @@
 
     namespace isfonzar\TDEECalculator\Providers\Formulas;
     use isfonzar\TDEECalculator\Exceptions\InvalidGender;
+    use isfonzar\TDEECalculator\Models\Age;
     use isfonzar\TDEECalculator\Models\Gender;
+    use isfonzar\TDEECalculator\Models\Height;
+    use isfonzar\TDEECalculator\Models\Weight;
 
     /**
      * Class OriginalHarrisBenedictEquation
@@ -12,7 +15,7 @@
      */
     class OriginalHarrisBenedictEquation implements FormulaInterface
     {
-        public function calculate(Gender $gender, $weight, $height, $age)
+        public function calculate(Gender $gender, Weight $weight, Height $height, Age $age)
         {
             switch ($gender)
             {
@@ -27,20 +30,20 @@
             throw new InvalidGender();
         }
 
-        private function calculateForMen($weight, $height, $age)
+        private function calculateForMen(Weight $weight, Height $height, Age $age)
         {
-            $totalHeatProdution = 15.7516 * $weight / 1;
+            $totalHeatProdution = 66.5;
 
-            $totalHeatProdution += 5.0033 * $height / 1;
+            $totalHeatProdution += (13.75 * $weight);
 
-            $totalHeatProdution -= 6.7550 * $age / 1;
+            $totalHeatProdution += (5.0033 * $height);
 
-            $totalHeatProdution += 66.4730;
+            $totalHeatProdution -= (6.755 * $age);
 
             return $totalHeatProdution;
         }
 
-        private function calculateForWomen($weight, $height, $age)
+        private function calculateForWomen(Weight $weight, Height $height, Age $age)
         {
 
         }

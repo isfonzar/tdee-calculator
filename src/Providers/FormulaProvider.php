@@ -2,20 +2,21 @@
 
     namespace isfonzar\TDEECalculator\Providers;
 
+    use isfonzar\TDEECalculator\Exceptions\InvalidFormula;
     use isfonzar\TDEECalculator\Models\Gender;
+    use isfonzar\TDEECalculator\Models\Weight;
     use isfonzar\TDEECalculator\Providers\Formulas\OriginalHarrisBenedictEquation;
 
     class FormulaProvider
     {
-        protected $formula;
+        protected $formula = 'OriginalHarrisBenedict';
 
-        /**
-         * FormulaProvider constructor.
-         *
-         * @param null $formula
-         */
+        private $allowedFormulas = ['OriginalHarrisBenedict'];
+
         public function __construct($formula = null)
         {
+            $this->validate($formula);
+
             switch ($formula)
             {
                 case 'OriginalHarrisBenedict':
@@ -35,8 +36,21 @@
          *
          * @return float
          */
-        public function calculate(Gender $gender, $weight, $height, $age)
+        public function calculate(Gender $gender, Weight $weight, $height, $age)
         {
             return $this->formula->calculate($gender, $weight, $height, $age);
+        }
+
+        private function validate($formula)
+        {
+            if (empty($formula))
+            {
+                return;
+            }
+
+            if (!in_array($formula, $this->allowedFormulas))
+            {
+                throw new InvalidFormula();
+            }
         }
     }
