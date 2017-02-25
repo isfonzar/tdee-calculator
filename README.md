@@ -3,7 +3,7 @@
 <p align="center">
 <a href="https://packagist.org/packages/isfonzar/tdee-calculator"><img src="https://img.shields.io/badge/Language-PHP-brightgreen.svg" alt="Language"></a>
 <a href="https://packagist.org/packages/isfonzar/tdee-calculator"><img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License"></a>
-<a href="https://packagist.org/packages/isfonzar/tdee-calculator"><img src="https://img.shields.io/badge/Version-1.0-brightgreen.svg" alt="Latest Stable Version"></a>
+<a href="https://packagist.org/packages/isfonzar/tdee-calculator"><img src="https://img.shields.io/badge/Version-1.01-brightgreen.svg" alt="Latest Stable Version"></a>
 </p>
 
 ## About TDEE Calculator
