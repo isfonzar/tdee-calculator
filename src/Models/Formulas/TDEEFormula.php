@@ -13,7 +13,7 @@
 
         const RevisedHarrisBenedict = 'revised_harris_benedict';
 
-        const MifflinStJeor = 'mifflin_sr_jeor';
+        const MifflinStJeor = 'mifflin_st_jeor';
 
         /**
          * @var array

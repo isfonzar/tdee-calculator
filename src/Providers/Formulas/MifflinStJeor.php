@@ -22,10 +22,10 @@
             switch ($gender)
             {
                 case Gender::MALE:
-                    $this->formula = new Male\OriginalHarrisBenedict();
+                    $this->formula = new Male\MifflinStJeor();
                     break;
                 case Gender::FEMALE:
-                    $this->formula = new Female\OriginalHarrisBenedict();
+                    $this->formula = new Female\MifflinStJeor();
                     break;
                 default:
                     throw new InvalidGender();

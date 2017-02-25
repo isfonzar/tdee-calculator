@@ -3,6 +3,7 @@
     namespace isfonzar\TDEECalculator\Providers;
 
     use isfonzar\TDEECalculator\Models\Formulas\TDEEFormula;
+    use isfonzar\TDEECalculator\Providers\Formulas\MifflinStJeor;
     use isfonzar\TDEECalculator\Providers\Formulas\OriginalHarrisBenedict;
     use isfonzar\TDEECalculator\Providers\Formulas\RevisedHarrisBenedict;
 
@@ -33,6 +34,9 @@
                     break;
                 case TDEEFormula::RevisedHarrisBenedict:
                     $this->formula = new RevisedHarrisBenedict($gender);
+                    break;
+                case TDEEFormula::MifflinStJeor:
+                    $this->formula = new MifflinStJeor($gender);
                     break;
             }
         }
