@@ -53,4 +53,9 @@
                 throw new InvalidUnit();
             }
         }
+
+        public function __toString()
+        {
+            return (string)$this->value;
+        }
     }
