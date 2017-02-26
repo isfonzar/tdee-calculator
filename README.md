@@ -34,8 +34,6 @@ $ composer require isfonzar/tdee-calculator
 
 require(__DIR__ . '/vendor/autoload.php');
 
-use iiiicaro\SentimentThermometer\SentimentThermometer;
-
 // Calculations based on weight, height and age
 use isfonzar\TDEECalculator\TDEECalculator;
 
