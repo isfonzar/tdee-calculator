@@ -40,7 +40,7 @@
          * @var array
          */
         private $activityLevel = [
-            self::NO_ACTIVITY => 0,
+            self::NO_ACTIVITY => 1.0,
             self::SEDENTARY => 1.2,
             self::LIGHT_ACTIVE => 1.425,
             self::ACTIVE => 1.55,
