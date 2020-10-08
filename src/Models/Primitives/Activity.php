@@ -59,7 +59,7 @@
          */
         public function __construct($activity)
         {
-            if (!in_array($activity, $this->activityLevel))
+            if (!in_array($activity, array_keys($this->activityLevel)))
             {
                 throw new InvalidActivityLevel();
             }
