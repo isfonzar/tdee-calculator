@@ -4,7 +4,7 @@
 
     use isfonzar\TDEECalculator\Providers\Formulas\Female\OriginalHarrisBenedict;
 
-    class OriginalHarrisBenedictTest extends \PHPUnit_Framework_TestCase
+    class OriginalHarrisBenedictTest extends \PHPUnit\Framework\TestCase
     {
         public function testIfCalculatesCorrectly()
         {
